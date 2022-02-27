@@ -284,6 +284,7 @@ sub prune_snapshots {
 			unless ($type =~ /ly$/) { next; }
 
 			# we need to set the period length in seconds first
+			$period = 0;
 			if ($type eq 'frequently') { $period = 60 * $config{$section}{'frequent_period'}; }
 			elsif ($type eq 'hourly') { $period = 60*60; }
 			elsif ($type eq 'daily') { $period = 60*60*24; }
